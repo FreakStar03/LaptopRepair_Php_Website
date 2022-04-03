@@ -6,14 +6,14 @@ docker: MysqlDocker/docker-compose.yml
 	echo "wait 2 minutes"
 
 docker-stop: 
-	docker container stop mysql_container 
+	docker container stop mysql_laptop_repair 
  
 docker-start: 
-	docker container start mysql_container 
+	docker container start mysql_laptop_repair 
 
 docker-remove:
 	docker container stop mysql_container
-	docker container rm -v mysql_container
+	docker container rm -v mysql_laptop_repair
 
 mysql-dump: MysqlDocker/init/dataBaseDump.sql
 	rm -r MysqlDocker/init/dataBaseDump.sql
