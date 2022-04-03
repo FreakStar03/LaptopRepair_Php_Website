@@ -8,5 +8,8 @@ services:
         restart: always
         volumes: 
             - ./init:/docker-entrypoint-initdb.d
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: laptop_repair
         ports: 
             - 3307:3306
