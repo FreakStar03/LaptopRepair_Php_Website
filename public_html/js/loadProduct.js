@@ -15,7 +15,7 @@
                 <h5 class='card-title'>"+ e +" </h5>\
                 <img src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80' class='img-thumbnail' alt='abc'/>\
                 <p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>\
-                <a href='/repair?p="+ e +"' class='btn btn-primary laptop_view_btn'>Go somewhere</a>\
+                <a href='/repair.php?p="+ e +"' class='btn btn-primary laptop_view_btn'>Go somewhere</a>\
               </div>\
             </div>\
           </div>"
@@ -33,7 +33,7 @@
                 <h5 class='card-title'>"+ e +" </h5>\
                 <img src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80' class='img-thumbnail' alt='abc'/>\
                 <p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>\
-                <a href='/repair?p="+ e +"' class='btn btn-primary laptop_view_btn'>Go somewhere</a>\
+                <a href='/repair.php?p="+ e +"' class='btn btn-primary laptop_view_btn'>Go somewhere</a>\
               </div>\
             </div>\
           </div>"
@@ -52,7 +52,7 @@
                 <h5 class='card-title'>"+ e +" </h5>\
                 <img src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80' class='img-thumbnail' alt='abc'/>\
                 <p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>\
-                <a href='/repair?p="+ e +"' class='btn btn-primary laptop_view_btn'>Go somewhere</a>\
+                <a href='/repair.php?p="+ e +"' class='btn btn-primary laptop_view_btn'>Go somewhere</a>\
               </div>\
             </div>\
           </div>"

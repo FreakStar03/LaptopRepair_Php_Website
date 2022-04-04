@@ -27,7 +27,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Contact</a>
+                <a class="nav-link" href="dashboard.php">Dashboard</a>
               </li>
 
               <?php if (isset($_SESSION['user'])): ?>

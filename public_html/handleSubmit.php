@@ -1,7 +1,7 @@
 <?php
   require_once("../resources/config.php");
   require_once(LIBRARY_PATH . "/templateHandleSQL.php");
-  $conn = new mysqli($servername, $username, $password, $dbname, $port);
+  $conn = getConnection();
 
   if ($_POST['logout']=='True') {
     // destroy the session
