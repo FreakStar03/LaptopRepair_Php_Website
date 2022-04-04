@@ -1,15 +1,44 @@
-version: '3.6'
-
-services: 
-    db:
+version: "2"
+services:
+    www:
         build: .
+        container_name: php_laptop_repair
+        ports: 
+            - "8001:80"
+        volumes:
+            - ../public_html/:/var/www/html/
+            - ../resources/:/var/www/resources/
+        links:
+            - db
+        networks:
+            - default
+        stdin_open: true
+        tty: true
+    db:
+        image: mysql
         container_name: mysql_laptop_repair
+        entrypoint: ['/entrypoint.sh', '--character-set-server=utf8', '--collation-server=utf8_general_ci']
         command: --default-authentication-plugin=mysql_native_password
-        restart: always
-        volumes: 
-            - ./init:/docker-entrypoint-initdb.d
+        ports: 
+            - "3307:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: laptop_repair
-        ports: 
-            - 3307:3306
+        volumes:
+            - ./init:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin_LR
+        links: 
+            - db:db
+        ports:
+            - 8002:80
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+volumes:
+    persistent:
